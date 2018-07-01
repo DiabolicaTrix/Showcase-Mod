@@ -13,8 +13,8 @@ item.showcasemod:silver_coin.name=Pièce d'argent
 item.showcasemod:gold_coin.name=Pièce d'or
 item.showcasemod:showcase_modifier.name=Ajusteur de Vitrine
 
-showcasemod.message.selling=Vends
-showcasemod.message.for=pour
+showcasemod.message.selling=Vends 
+showcasemod.message.for= pour 
 
 showcasemod.message.nothingtosell=Le magasin n'a rien à vendre!
 showcasemod.message.cannotafford=Vous n'avez pas assez d'argent!

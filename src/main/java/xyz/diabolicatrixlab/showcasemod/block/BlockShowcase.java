@@ -5,6 +5,8 @@ import java.util.UUID;
 import mcjty.theoneprobe.api.IProbeHitData;
 import mcjty.theoneprobe.api.IProbeInfo;
 import mcjty.theoneprobe.api.ProbeMode;
+import mcjty.theoneprobe.api.TextStyleClass;
+import mcjty.theoneprobe.apiimpl.styles.TextStyle;
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
@@ -22,7 +24,6 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldServer;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.relauncher.Side;
@@ -147,10 +148,7 @@ public class BlockShowcase extends Block implements ITileEntityProvider, ITOPInf
             if(te.getItemStack() != ItemStack.EMPTY){
 	            ItemStack coinStack = new ItemStack(te.coinId == 0 ? ItemRegistry.copperCoin : te.coinId == 1 ? ItemRegistry.silverCoin : ItemRegistry.goldCoin, te.price);
 	            ItemStack stack = te.getItemStack();
-	            if(!world.isRemote)
-	            {
-	            	probeInfo.horizontal().text("Selling ").item(stack).text(" for ").item(coinStack);
-	            }
+	            probeInfo.horizontal().text(IProbeInfo.STARTLOC + "showcasemod.message.selling" + IProbeInfo.ENDLOC).item(stack).text(IProbeInfo.STARTLOC + "showcasemod.message.for" + IProbeInfo.ENDLOC).item(coinStack);
 	        }
 		}
 	}

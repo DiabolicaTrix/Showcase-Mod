@@ -13,8 +13,8 @@ item.showcasemod:silver_coin.name=Silver Coin
 item.showcasemod:gold_coin.name=Gold Coin
 item.showcasemod:showcase_modifier.name=Showcase Modifier
 
-showcasemod.message.selling=Selling
-showcasemod.message.for=for
+showcasemod.message.selling=Selling 
+showcasemod.message.for= for 
 
 showcasemod.message.nothingtosell=The shop has nothing to sell!
 showcasemod.message.cannotafford=You cannot afford to buy this!
