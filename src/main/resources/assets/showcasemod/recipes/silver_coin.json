@@ -1,0 +1,15 @@
+{
+  "result": {
+    "item": "showcasemod:silver_coin"
+  },
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "showcasemod:copper_coin"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "result": {
+    "item": "showcasemod:showcase_block"
+  },
+  "pattern": [
+    "qgq",
+    "g g",
+    "qqq"
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "q": {
+      "type": "forge:ore_dict",
+      "ore": "blockQuartz"
+    },
+    "g": {
+        "type": "forge:ore_dict",
+        "ore": "blockGlass"
+    }
+  }
+}

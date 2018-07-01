@@ -1,0 +1,16 @@
+[
+{
+  "modid": "showcasemod",
+  "name": "Showcase Mod",
+  "description": "",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["DiabolicaTrix"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
