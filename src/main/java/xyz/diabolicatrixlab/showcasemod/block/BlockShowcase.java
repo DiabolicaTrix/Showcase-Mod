@@ -14,6 +14,7 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
@@ -106,7 +107,14 @@ public class BlockShowcase extends Block implements ITileEntityProvider, ITOPInf
     		TileEntity te = worldIn.getTileEntity(pos);
     		if(te instanceof TileEntityShowcase){
     			if(playerIn.getHeldItemMainhand().getItem() instanceof ItemShowcaseModifier && PermissionAPI.hasPermission(playerIn, "showcasemod.shops.edit")){
-					((TileEntityShowcase) te).toggleAdminShop(playerIn);
+					ItemStack stack = playerIn.getHeldItemMainhand();
+					NBTTagCompound nbt = stack.hasTagCompound() ? stack.getTagCompound() : new NBTTagCompound();
+					int mode = nbt.hasKey("Mode") ? nbt.getInteger("Mode") : 0;
+					if(mode == 1)
+					{
+						((TileEntityShowcase) te).toggleAdminShop(playerIn);
+						return true;
+					}
 				}
     			playerIn.openGui(ShowcaseMod.instance, GUI_ID, worldIn, pos.getX(), pos.getY(), pos.getZ());
     			return true;
